@@ -14,7 +14,7 @@ class Dictionary
       dictionary[i] = []
     end
 
-    text=File.open('../words/dictionary.txt').read
+    text=File.open('../dictionary/dictionary.txt').read
     text.gsub!(/\r\n?/, "\n")
     text.each_line do |line|
       dictionary[line.length] << line.chop.to_s.downcase
